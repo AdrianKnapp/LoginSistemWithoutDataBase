@@ -75,15 +75,48 @@ function salvar() {
 }
 
 ///////////////////////// Troca de arquivo.
+/*
 function receber() {
   var loginUser = document.getElementById('loginUser').value;
   var loginSenha = document.getElementById('loginSenha').value;
 
 
-  if(loginUser == localStorage.user && loginSenha == localStorage.senha) {
-    alert("correto");
+  if(loginUser == localStorage.user && loginSenha == localStorage.senha ) {
+    window.location.href="medicenter/site.html";
   } else {
-    alert("incorreto.");
+    alert("Dados inválidos.")
   }
+}
+*/
+function verificar() {
+  var campo1 = document.getElementById('loginUser');
+  var campo2 = document.getElementById('loginSenha');
 
+  if(event.keyCode == 32) {
+    alert("Não digite espaço");
+    campo1.style.borderBottom = "2px solid red";
+  } else {
+    campo1.style.borderBottom = "2px solid black";
+    }
+}
+
+function redirecionar() {
+  window.location.href = "index.html";
+}
+
+function espacos() {
+  var loginUser = document.getElementById('loginUser').value;
+  var loginSenha = document.getElementById('loginSenha').value;
+  if(loginUser, loginSenha == "") {
+    alert("Dados inválidos");
+  } else {
+    var loginUser = document.getElementById('loginUser').value;
+    var loginSenha = document.getElementById('loginSenha').value;
+
+    if(loginUser == localStorage.user && loginSenha == localStorage.senha ) {
+    window.location.href="medicenter/site.html";
+  } else {
+    alert("Dados inválidos.")
+  }
+  }
 }

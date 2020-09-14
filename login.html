@@ -22,19 +22,20 @@
                     </div>
                 </div>
                 <label for="user"></label>
-                <input type="text" name="user" id="loginUser" placeholder="Digite seu usuário" class="marg">
+                <input type="text" name="user" id="loginUser" placeholder="Digite seu usuário" class="marg"
+                onkeyup="verificar()">
                 <label for="senha"></label>
                 <input type="password" name="senha" id="loginSenha"
                 placeholder="Digite sua senha">
             </form>
             <div class="line">
-            <div onclick="receber()" class="button"> Login </div>
+            <div onclick="espacos()" class="button"> Login </div>
             </div>
             <div class="line">
-                <div class="esqueci">
+                <div class="esqueci" onclick="redirecionar()">
                     Esqueci meu login
                 </div>
-                <div class="esqueci">
+                <div class="esqueci" onclick="redirecionar()">
                     Cadastrar
                 </div>
             </div>
