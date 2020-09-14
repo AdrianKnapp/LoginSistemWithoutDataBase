@@ -22,8 +22,17 @@ function verTecla() {
   };
   if(event.keyCode == 32) {
     alert("Não digite espaço.")
+    document.getElementById('nome').value = "";
   }else {
 
+  };
+}
+
+function verificarNumeros() {
+  if(event.keyCode > 48 && event.keyCode < 57) {
+    alert("Não digite números.")
+    document.getElementById('sobrenome').value = "";
+  } else {
   };
 }
 function verificarEspaco() {
@@ -37,23 +46,32 @@ function verificarEspaco() {
 }
 
 
-var verificarSenha = function() {
+var verificarTudo = function() {
+
   var senha1 = document.getElementById('cad_senha').value;
   var senha2 = document.getElementById('senha_confirm').value;
+
   if(senha1 != senha2) {
-    alert("Senhas não são iguais.");
+    alert("As senhas não coincidem, tente novamente.");
     var senha1 = document.getElementById('cad_senha').value = "";
     var senha2 = document.getElementById('senha_confirm').value = "";
   } else {
-    window.location.href = "pagina.html";
+      var campo1 = document.getElementById('nome').value;
+      var campo2 = document.getElementById('sobrenome').value;
+      var campo3 = document.getElementById('cad_user').value;
+      var campo4 = document.getElementById('cad_senha').value;
+      var campo5 = document.getElementById('senha_confirm').value;
+       if( campo1 == "" || campo2 == "" || campo3 == "" || campo4 == "" || campo5 == ""){
+         alert("Preencha os campos");
+        }   else {
+              window.location.href = "login.html";
+       }
   }
 }
-
-
-
 function salvar() {
+  verificarTudo();
   cadastro();
-  verificarSenha();
+
 }
 /*
 var mudarBar = function() {
