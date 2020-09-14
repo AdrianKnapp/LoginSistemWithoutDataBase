@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Montserrat;
+}
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.box{
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    padding: 0;
+}
+.line {
+    display: flex;
+}
+.line input {
+    border-bottom: 3px solid black;
+    font-weight: 200;
+}
+.line input::placeholder {
+    font-weight: 300;
+}
+
+
+
+.line input:focus {
+    border-bottom: 3px solid rgb(0, 140, 255);
+    animation-name: bar;
+
+}
+.labelLine {
+    color: black;
+    width:auto;
+    height: auto;
+    font-size: 40px;
+}
+.input_area {
+    font-size: 40px;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: 200;
+}
