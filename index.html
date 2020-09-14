@@ -11,16 +11,35 @@
     <div class="container">
         <div class="box">
             <form method="POST">
+                <div class="cadastro"> INFORMAÇÕES PESSOAIS: </div>
+                <div class="line">
+                    <label for="nome" class="labelLine"></label>
+                    <input type="text" name="nome" placeholder="Nome" class="nome" maxlength="20" id="nome" onkeyup="verTecla()">
+                </div>
+                <div class="line name">
+                    <label for="nome" class="labelLine"></label>
+                    <input type="text" name="nome" placeholder="Sobrenome" class="nome" maxlength="30" id="sobrenome" onkeyup="verTecla()">
+                </div>
+                <div class="cadastro"> INFORMAÇÕES DE LOGIN: </div>
                 <div class="line">
                     <label for="cad_user" class="labelLine"></label>
-                    <input type="text" name="cad_user" id="cad_user"  placeholder="Novo usuário">
+                    <input type="text" name="cad_user" id="cad_user"  placeholder="Novo usuário" onkeyup="verificarEspaco()">
                 </div>
                 <div class="line">
                     <label for="cad_senha" class="labelLine">  </label>
-                    <input type="text" name="cad_senha" id="cad_senha"  placeholder="Nova senha">
+                    <input type="password" name="cad_senha" id="cad_senha"  placeholder="Nova senha" style="font-weight: 400;" onkeyup="verificarEspaco()">
+                </div>
+                <div class="line">
+                    <label for="cad_senha" class="labelLine">  </label>
+                    <input type="password" name="cad_senha" id="senha_confirm"  placeholder="Confirmar senha" style="font-weight: 400;">
                 </div>
             </form>
-            <div onclick="salvar()"> Cadastrar </div>
+            <div class="cadastro">
+                <div class="button" onclick="salvar()"> Cadastrar </div>
+            </div>
+            <div class="line dir">
+                <div class="direitos"> Todas informações digitadas não serão armazenadas, apenas memorizadas por seu navegador.</div>
+            </div>
         </div>
     </div>
 </body>

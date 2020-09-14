@@ -8,17 +8,21 @@ body {
 }
 .container {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .box{
     margin-top: 20px;
-    width: auto;
+    width: 500px;
     height: auto;
     background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 30px 30px 0px 30px;
+    border-radius: 7px;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(39, 19, 4, 0.49);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(54, 28, 7, 0.49);
+    box-shadow: 0px 0px 8px 0px rgba(39, 19, 4, 0.49);
 }
 form {
     display: flex;
@@ -26,17 +30,143 @@ form {
     margin:0;
     padding: 0;
 }
+input::placeholder {
+    font-weight: 300;
+    color: #ff8800bb;
+}
 input {
+    width: 100%;
+    height: auto;
+    text-align: center;
     font-size: 40px;
-    padding: 10px;
-    font-weight: lighter;
+    font-family: Montserrat;
+    padding: 5px 10px 0px 10px;
     border: 0;
-    border-bottom: 3px solid rgb(78, 41, 17);
+    border-bottom: 2px solid #492a07;
+    color: #492a07;
     outline: 0;
 }
-input:focus {
-    border-bottom: 3px solid rgb(255, 187, 0);
+input:hover {
+    animation-name: ver;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
-input::-webkit-input-placeholder, .input::-moz-placeholder, .input:-ms-input-placeholder, .input:-o-input-placeholder {
-    font-weight: 100;
+@keyframes ver {
+    from {
+
+    }
+    to {
+        border-bottom: 2px solid #000000;
+    }
+}
+input:focus {
+    animation-name: anima;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes anima {
+    from {
+    }
+    to {
+        border-bottom: 2px solid rgb(255, 187, 0);
+    }
+}
+.name {
+    margin-bottom: 30px;
+}
+.nome {
+    text-align: start;
+    padding-left: 20px;
+}
+.cadastro {
+    color: #492a07;
+    width: 100%;
+    font-size: 15px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+.button {
+    cursor: pointer;
+    user-select: none;
+    width: auto;
+    height: auto;
+    padding: 0px;
+    padding: 20px;
+    background-color: #ffc31f;
+    color: #492a07;
+    border-radius: 2px;
+    border: 1px solid white;
+    margin-top: 30px;
+}
+.button:hover {
+    animation-name: botao;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes botao {
+    from {
+
+    }
+    to {
+        background-color:#ffbb00c4;
+        border: 1px solid #492a07;
+    }
+}
+.dir {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.direitos {
+    color: rgba(0, 0, 0, 0.596);
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 425px) and (min-width:375px) {
+    input {
+        font-size: 20px;
+        margin: 5px 0px 5px 0px;
+    }
+    .box {
+        padding: 40px 5px 0px 5px;
+        width: 400px;
+    }
+    .cadastro {
+        font-size: 15px;
+    }
+}
+@media(max-width: 375px) and (min-width:320px) {
+    input {
+        font-size: 20px;
+        margin: 5px 0px 5px 0px;
+    }
+    .box {
+        padding: 40px 5px 0px 5px;
+        width: 350px;
+        border-radius: 3px;
+    }
+    .cadastro {
+        font-size: 15px;
+    }
+}
+@media (max-width: 320px) {
+    input {
+        font-size: 20px;
+        margin: 5px 0px 5px 0px;
+        font-size: 25px;
+    }
+    .box {
+        padding: 40px 5px 0px 5px;
+        width: 280px;
+    }
+    .cadastro {
+        font-size: 15px;
+    }
+    .button {
+        margin-top: 10px;
+    }
 }
