@@ -73,12 +73,8 @@ function salvar() {
   cadastro();
 
 }
-/*
-var mudarBar = function() {
-  var bar = document.getElementById('nome');
-  bar.style.borderBottom = "3px solid red";
-}
-*/
+
+///////////////////////// Troca de arquivo.
 function receber() {
   var loginUser = document.getElementById('loginUser').value;
   var loginSenha = document.getElementById('loginSenha').value;

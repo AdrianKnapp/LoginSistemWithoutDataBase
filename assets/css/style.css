@@ -5,6 +5,7 @@ body {
     background-size: cover;
     background-position: center;
     font-family: Montserrat;
+    user-select: none;
 }
 .container {
     width: 100%;
@@ -81,6 +82,7 @@ input:focus {
     display: flex;
     justify-content: center;
     font-weight: 500;
+    user-select: none;
 }
 .button {
     cursor: pointer;
